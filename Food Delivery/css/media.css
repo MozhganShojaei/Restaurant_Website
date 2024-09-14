@@ -1,0 +1,21 @@
+@media (max-width:834px){
+    .nav{
+        grid-template-columns: repeat(3,auto);
+    }
+    /* این علامت > یعنی فرزندان مستقیم */
+    .nav > ul{
+        display: none;
+    }
+    .link-nav{
+        justify-self: center;
+    }
+    .menu-icon{
+        justify-self: flex-end;
+    }
+}
+
+@media (min-width:835px){
+    .menu-icon{
+        display: none;
+    }
+}

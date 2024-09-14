@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Poppins;
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+ul{ list-style: none; } a{ text-decoration: none; }
+
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    src: url('../font/Poppins/poppins-bold-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    src: url('../font/Poppins/Poppins-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../font/Poppins/poppins-medium-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/Poppins/Poppins-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../font/Poppins/poppins-light-webfont.woff') format('woff');
+}
+
+:root{
+    --main-color: #C90000;
+    --firth-color: #7D7C7C;
+    --second-color: #504F4F;
+    --third-color: #323232;
+    --fourth-color: #FFC300;
+    --fifth-color: #FFF6A3;
+    --sixth-color: #E3E3E3;
+    --seventh-color: #F1F1F1;
+    --eighth-color: #fff;
+    --ninth-color: #504F4F;
+    --last-color: rgba(241, 241, 241, 0.7);
+}
+
+
+/* ----- Header ----- */
+.main-header{
+    margin-top: 1rem;
+}
+.nav{
+    display: grid;
+    grid-template-columns: 58px 635px 187px;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .nav img{
+    width: 54px;
+    height: 56px;
+    border-radius: 8px;
+} */
+.nav ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.5rem;
+}
+.nav ul li:first-child a{
+    color: var(--main-color);
+    font-weight: 600;
+}
+.nav ul li:first-child a:hover{
+    color: #f49b01;
+    font-weight: 600;
+}
+.nav ul li:not(:first-child) a{
+    color: var(--firth-color);
+    font-weight: 500;
+}
+.nav ul li:not(:first-child) a:hover{
+    color: #C90000;
+    font-weight: 500;
+}
+.link-nav a{
+    border: 1px solid var(--main-color);
+    padding: 9px 16px;
+    font-size: 16px;
+    gap: 10px;
+    border-radius: 100px;
+}
+.link-nav a:first-child{
+    color: var(--main-color);
+    font-weight: 400;
+    gap: 10px;
+}
+
+.link-nav a:last-child{
+    background-color: var(--main-color);
+    color: var(--eighth-color);
+    font-weight: 500;
+    gap: 10px;
+}
+
+.nav-menu-sidebar{
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 10;
+    background-color: var(--eighth-color);
+    height: 100%;
+    padding: 1rem;
+    width: 200px;
+    border-left: 2px solid var(--firth-color);
+    transform: translateX(+300px);
+    transition: all 250ms ease-out;
+}
+#close-icon{
+    display: none;
+    color: var(--second-color);
+}
+
+/* ----- Burger Responsive ----- */
+
+/* #menu-input:checked ~ label */
+#menu-input:checked + label + ul{
+    transform: translateX(0);
+}
+#menu-input:checked + label svg:first-child{
+    display: none;
+}
+#menu-input:checked + label svg:last-child{
+    display: block;
+}
+
+/* ----- Header Bottom ----- */
+.header-bottom{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.header-content-left{
+    align-self: center;
+}
+.header-content-left h1{
+    color: var(--main-color);
+    font-size: 48px;
+    font-weight: 600;
+}
+.header-content-left p{
+    color: var(--ninth-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    width: 77%;
+}
+.order-food{
+    margin-top: 40px;
+}
+.text-price-order{
+    color: var(--third-color);
+    margin-bottom: 1rem;
+}
+.text-price-order span:first-child{
+    color: var(--third-color);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.text-price-order span:nth-child(2){
+    color: var(--third-color);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+}
+.text-price-order span:last-child{
+    color: var(--third-color);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+}
+.action-order{
+    display: flex;
+    justify-content: space-between;
+    max-width: 79%;
+}
+.button-action{
+    border: 1px solid var(--last-color);
+    background-color: var(--eighth-color);
+    border-radius: 100px;
+    padding: 8px 16px;
+    box-shadow: 0px 10px 17px 0px rgba(112, 144, 176, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 41%;
+    gap: 12px;
+}
+.button-action button{
+    background-color: transparent;
+    border: none;
+}
+.button-action span{
+    color: var(--fourth-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+.button-action span::after , .button-action span::before{
+    content: '';
+    width: 1px;
+    height: 22px;
+    display: inline-block;
+    color: var(--last-color);
+}
+.button-action span::after{
+    margin-left: 12px;
+}
+.button-action span::before{
+    margin-right: 12px;
+}
+.action-order > button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--third-color);
+    background-color: var(--fourth-color);
+    box-shadow: 0 20px 20px 0 var(--last-color);
+    border: none;
+    border-radius: 100px;
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.button-action span{
+    margin-bottom: 5px;
+}
+.action-order > button svg{
+    margin-right: 5px;
+    margin-top: -3px;
+}
