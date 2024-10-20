@@ -541,3 +541,41 @@ img{width: 100%;}
 .second-child{
     right: 95%;
 }
+.section-mobile{
+    border: 1px solid var(--sixth-color);
+    background-color: var(--seventh-color);
+    border-radius: 0 500px 500px 0;
+    max-width: 80%;
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 30% 65%;
+}
+.img-section-mobile img{
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+    position: relative;
+    max-width: 400px;
+    top: -20px;
+}
+.content-section-mobile{
+    padding: 2rem;
+    justify-self: center;
+    align-items: center;
+}
+.dl-btn-app a{
+    margin-top: 32px;
+    width: 14%;
+    display: inline-block;
+}
+.content-section-mobile h6{
+    color: var(--firth-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+.content-section-mobile h4{
+    color: var(--main-color);
+    font-size: 48px;
+    font-weight: 500;
+    margin: 1rem 0;
+}
